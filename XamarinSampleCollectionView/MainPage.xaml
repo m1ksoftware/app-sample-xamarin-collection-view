@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinSampleCollectionView.MainPage">
+
+    <StackLayout
+        Orientation="Vertical"
+        Spacing="0">
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Margin="25 0 0 0" Text="Test CollectionView" HorizontalTextAlignment="Center" TextColor="White" FontSize="26"/>
+        </Frame>
+        <CollectionView
+            x:Name="collectionView"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"                            
+            SelectionMode="None">
+
+
+        </CollectionView>
+
+    </StackLayout>
+
+</ContentPage>
+

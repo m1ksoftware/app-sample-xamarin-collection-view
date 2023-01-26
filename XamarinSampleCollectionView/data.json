@@ -1,0 +1,14 @@
+﻿[
+    {
+        "id": 1,
+        "name": "British Shorthair",
+        "description": "The British Shorthair is the pedigreed version of the traditional British domestic cat, with a distinctively stocky body, dense coat, and broad face.",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/British_blue_2009_%28cropped%29.jpg/440px-British_blue_2009_%28cropped%29.jpg"
+    },
+    {
+        "id": 2,
+        "name": "American Shorthair",
+        "description": "The British Shorthair is the pedigreed version of the traditional British domestic cat, with a distinctively stocky body, dense coat, and broad face.",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/British_blue_2009_%28cropped%29.jpg/440px-British_blue_2009_%28cropped%29.jpg"
+    }
+]
