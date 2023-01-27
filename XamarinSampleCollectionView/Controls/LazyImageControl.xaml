@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinSampleCollectionView.Controls.LazyImageControl">
+    <Grid
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="96" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="96" />
+        </Grid.RowDefinitions>
+        <ActivityIndicator
+            x:Name="activityIndicator"
+            Grid.Column="0"
+            Grid.Row="0"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"            
+            Color="Blue"
+            Scale="2"
+            IsRunning="true" />
+        <Image
+            x:Name="image"
+            IsVisible="false"
+            Aspect="Fill">
+        </Image>
+    </Grid>
+</ContentView>
+

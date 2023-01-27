@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -6,20 +7,34 @@ using Xamarin.Forms;
 
 namespace XamarinSampleCollectionView.ViewModel
 {
-    public class CatViewModel : BaseViewModel
+    public class CatViewModel : MvvmHelpers.BaseViewModel
     {
         private HttpClient httpClient;
 
+        private bool initialLoading;
+
         public CatViewModel()
         {
+            this.httpClient = new HttpClient();
+            this.Cats = new ObservableCollection<Model.Cat>();
             this.GetCatsCommand = new Command(async () => await GetCatsAsync());
+
+            //this.InitialLoading = true;
+            _ = this.GetCatsAsync();
         }
 
-        public HttpClient CustomHttpClient => httpClient ?? (httpClient = new HttpClient());
-
-        public ObservableCollection<Model.Cat> Cats { get; }
+        public ObservableCollection<Model.Cat> Cats { get; set; }
 
         public Command GetCatsCommand { get; }
+
+        public bool InitialLoading
+        {
+            get => this.initialLoading;
+            set
+            {
+                this.SetProperty(ref this.initialLoading, value);
+            }
+        }
 
         public async Task GetCatsAsync()
         {
@@ -32,8 +47,10 @@ namespace XamarinSampleCollectionView.ViewModel
             {
                 IsBusy = true;
 
-                var json = await CustomHttpClient.GetStringAsync("https://montemagno.com/monkeys.json");
-                var cats = Cat.FromJson(json);
+                var json = await this.httpClient.GetStringAsync(
+                    "https://raw.githubusercontent.com/m1ksoftware/app-sample-xamarin-collection-view/master/XamarinSampleCollectionView/data.json");
+
+                var cats = Model.Cat.FromJson(json);
 
                 Cats.Clear();
 
@@ -41,6 +58,8 @@ namespace XamarinSampleCollectionView.ViewModel
                 {
                     Cats.Add(cat);
                 }
+
+                this.InitialLoading = false;
             }
             catch (Exception ex)
             {
@@ -52,7 +71,7 @@ namespace XamarinSampleCollectionView.ViewModel
             {
                 IsBusy = false;
             }
-        }
+        }        
     }
 }
 

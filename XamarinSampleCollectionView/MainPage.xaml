@@ -1,23 +1,72 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XamarinSampleCollectionView.MainPage">
+             x:Class="XamarinSampleCollectionView.MainPage"
+             xmlns:converter="clr-namespace:XamarinSampleCollectionView.Converters"
+             xmlns:controls="clr-namespace:XamarinSampleCollectionView.Controls"
+             x:Name="mainView">
 
     <StackLayout
         Orientation="Vertical"
+        HorizontalOptions="Fill"
+        VerticalOptions="Fill"
         Spacing="0">
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Margin="25 0 0 0" Text="Test CollectionView" HorizontalTextAlignment="Center" TextColor="White" FontSize="26"/>
+            <Label Margin="0,25,0,0" Text="Test CollectionView" HorizontalTextAlignment="Center" TextColor="White" FontSize="26"/>
         </Frame>
-        <CollectionView
-            x:Name="collectionView"
-            HorizontalOptions="FillAndExpand"
-            VerticalOptions="FillAndExpand"                            
-            SelectionMode="None">
 
-
-        </CollectionView>
-
+        <Grid
+            HorizontalOptions="Fill"
+            VerticalOptions="FillAndExpand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <ActivityIndicator
+                IsVisible="{Binding InitialLoading}"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Scale="2"
+                IsRunning="true"
+                Color="#2196F3">
+            </ActivityIndicator>
+            <CollectionView
+                x:Name="collectionView"
+                IsVisible="{Binding InitialDataLoaded}"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"                            
+                SelectionMode="None"                
+                ItemsSource="{Binding Cats}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout
+                            Orientation="Horizontal"
+                            HorizontalOptions="FillAndExpand"
+                            Padding="0, 8, 0, 0">
+                            <StackLayout
+                                WidthRequest="96"
+                                HeightRequest="96"
+                                MinimumWidthRequest="96"
+                                MinimumHeightRequest="96">
+                                <controls:LazyImageControl
+                                    CurrentViewModel="{Binding Source={x:Reference mainView}, Path=BindingContext}">
+                                </controls:LazyImageControl>
+                            </StackLayout>
+                            <StackLayout
+                                Orientation="Vertical"
+                                HorizontalOptions="Fill"
+                                VerticalOptions="Center"
+                                Margin="20, 0, 20, 0">
+                                <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="20" />
+                                <Label Text="{Binding Description}" FontSize="13" />
+                            </StackLayout>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
     </StackLayout>
 
 </ContentPage>

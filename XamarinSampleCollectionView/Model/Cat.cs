@@ -1,6 +1,11 @@
-﻿namespace XamarinSampleCollectionView.Model
+﻿using System.Globalization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using Xamarin.Forms;
+
+namespace XamarinSampleCollectionView.Model
 {
-	public class Cat
+	public partial class Cat
 	{
         [JsonProperty("id")]
         public int Id { get; set; }
@@ -14,6 +19,11 @@
         [JsonProperty("imageUrl")]
         public string ImageUrl { get; set; }
 
+        public ImageSource ImageSource { get; set; } = null;
+    }
+
+    public partial class Cat
+    {
         public static Cat[] FromJson(string json) => JsonConvert.DeserializeObject<Cat[]>(json, Converter.Settings);
     }
 
