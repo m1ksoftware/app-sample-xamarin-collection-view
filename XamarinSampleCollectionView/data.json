@@ -8,7 +8,67 @@
     {
         "id": 2,
         "name": "American Shorthair",
-        "description": "The British Shorthair is the pedigreed version of the traditional British domestic cat, with a distinctively stocky body, dense coat, and broad face.",
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/British_blue_2009_%28cropped%29.jpg/440px-British_blue_2009_%28cropped%29.jpg"
+        "description": "The American Shorthair (ASH) is a breed of domestic cat believed to be descended from European cats brought to North America by early...",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/14_years_old_american_shorthair.jpg/440px-14_years_old_american_shorthair.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Persian",
+        "description": "The Persian cat, also known as the Persian longhair, is a long-haired breed of cat characterized by a round face and short muzzle.",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/White_Persian_Cat.jpg/440px-White_Persian_Cat.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Main Coon",
+        "description": "The Maine Coon is a large domesticated cat breed. It is one of the oldest natural breeds in North America. The breed originated in...",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/05/Lulu_-_A_typical_Maine_Coon_cat.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Exotic Shorthair",
+        "description": "The Exotic Shorthair is a breed of cat developed as a short-haired version of the Persian. The Exotic is similar to the Persian in many...",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/73/Noidankattilan_Bellatrix_Exotic_shorthair.JPG"
+    },
+    {
+        "id": 6,
+        "name": "Exotic Shorthair",
+        "description": "The Ragdoll is a breed of cat with a distinct colorpoint coat and blue eyes. ts morphology is large and weighty...",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ragdoll_from_Gatil_Ragbelas.jpg/440px-Ragdoll_from_Gatil_Ragbelas.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Scottish Fold",
+        "description": "The Scottish Fold is a breed of domestic cat with a natural dominant gene mutation that affects cartilage throughout the body...",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Adult_Scottish_Fold.jpg/440px-Adult_Scottish_Fold.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Siberian cat",
+        "description": "The Siberian is a centuries-old landrace of domestic cat in Russia and recently developed as a formal breed with standards...",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Minniecat.png/440px-Minniecat.png"
+    },
+    {
+        "id": 9,
+        "name": "Birman",
+        "description": "The Birman, also called the \"Sacred Cat of Burma\", is a domestic cat breed. The Birman is a long-haired...",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Birmanstrofe.jpg/440px-Birmanstrofe.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Chartreux",
+        "description": "The Chartreux is a rare breed of cat from France, and is recognised by a number of registries around the world...",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/IC_Blue_Melody_Flipper_CHA_male_EX1_CACIB.jpg/440px-IC_Blue_Melody_Flipper_CHA_male_EX1_CACIB.jpg"
+    },
+    {
+        "id": 11,
+        "name": "American Bobtail",
+        "description": "The American Bobtail is an uncommon breed of domestic cat which was developed in the late 1960s. It is most notable for its ...",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/American_bobtail_2.jpg/440px-American_bobtail_2.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Manx Cat",
+        "description": "The Manx cat is a breed of domestic cat originating on the Isle of Man, with a naturally occurring mutation that shortens the tail....",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Manx_cat_by_Karen_Weaver.jpg"
     }
 ]
