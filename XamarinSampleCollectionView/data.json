@@ -2,13 +2,13 @@
     {
         "id": 1,
         "name": "British Shorthair",
-        "description": "The British Shorthair is the pedigreed version of the traditional British domestic cat, with a distinctively stocky body, dense coat, and broad face.",
+        "description": "The British Shorthair is the pedigreed version of the traditional British domestic cat, with a distinctively stocky body, dense...",
         "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/British_blue_2009_%28cropped%29.jpg/440px-British_blue_2009_%28cropped%29.jpg"
     },
     {
         "id": 2,
         "name": "American Shorthair",
-        "description": "The American Shorthair (ASH) is a breed of domestic cat believed to be descended from European cats brought to North America by early...",
+        "description": "The American Shorthair (ASH) is a breed of domestic cat believed to be descended from European cats brought to North America by...",
         "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/14_years_old_american_shorthair.jpg/440px-14_years_old_american_shorthair.jpg"
     },
     {
