@@ -89,14 +89,7 @@ namespace XamarinSampleCollectionView.Controls
                     this.image.IsVisible = true;                    
                 }
             }
-        }
-
-        protected override void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            base.OnPropertyChanged(propertyName);
-
-            Debug.WriteLine($"Property: {propertyName}");
-        }
+        }       
 
         public CatViewModel CurrentViewModel
         {
