@@ -57,8 +57,8 @@ namespace XamarinSampleCollectionView.Controls
                                 int number = rand.Next(2, 4);
                                 await Task.Delay(number * 1000);
 
-                                // At this point, to avoid to reload the
-                                // image again on CollectionView scroll,
+                                // To avoid to reload the
+                                // images again on CollectionView scroll,
                                 // we need to update the object in
                                 // collection view
                                 var catInCollection = this.CurrentViewModel.Cats.FirstOrDefault(c => c.Id == originalId);
